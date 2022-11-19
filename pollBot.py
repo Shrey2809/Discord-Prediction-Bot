@@ -65,10 +65,7 @@ class PollBot(commands.AutoShardedBot):
 
         self.team1 = []
         self.team2 = []
-        super().__init__(
-            command_prefix = prefixes,
-            status = discord.Status.online,
-            activity = discord.Game(name = "+help"))
+        super().__init__(status = discord.Status.online)
         self.config = config
         self.shard_count = self.config["shards"]["count"]
         shard_ids_list = []
